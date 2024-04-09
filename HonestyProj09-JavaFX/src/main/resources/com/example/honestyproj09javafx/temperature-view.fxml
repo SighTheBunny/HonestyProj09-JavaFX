@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" prefHeight="700.0" prefWidth="674.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="com.example.honestyproj09javafx.TemperatureController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature">
+      <font>
+         <Font size="27.0" />
+      </font>
+   </Text>
+   <Label fx:id="scaleLabel" alignment="BASELINE_LEFT" text="Scale:">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <TextField fx:id="scaleText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="26.0" prefWidth="161.0" promptText=" (Celsius or c,  Fahrenheight or f)" />
+   <Label fx:id="degreeLabel" text="Degree:" translateX="300.0" translateY="-93.0">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <TextField fx:id="degreeText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="(68.0...)" translateX="300.0" translateY="-93.0" />
+   <ButtonBar maxWidth="-Infinity" prefHeight="40.0" prefWidth="418.0" translateX="-60.0">
+     <buttons>
+         <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#onConvertButtonClick" text="Convert" />
+         <Button fx:id="button_clear" mnemonicParsing="false" onAction="#onClearButtonClick" text="Clear" />
+         <Button fx:id="saveButton" mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save Temperature" />
+     </buttons>
+   </ButtonBar>
+   <Label text="Converted:">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Label text="Celsius:" textFill="#707e6c" />
+   <Label fx:id="celsiusLabel" />
+   <Label text="Fahrenheight:" textFill="#633a3a" />
+   <Label fx:id="fahrenheightLabel" />
+
+    <Label fx:id="welcomeText" />
+   <Label text="If Scale or Degree is empty, default values Celsius and 0.0 will be used." />
+   <Label text="Compare Temperatures">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <ComboBox fx:id="temperatureDropdown1" prefHeight="26.0" prefWidth="190.0" promptText="Select Temperature 1" />
+   <ComboBox fx:id="temperatureDropdown2" prefHeight="26.0" prefWidth="193.0" promptText="Select Temperature 2" />
+   <Button alignment="BOTTOM_LEFT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#onCompareButtonClick" text="Compare" />
+   <Label fx:id="equalsLabel" translateX="300.0" translateY="-135.0" />
+   <Label fx:id="lessThanLabel" translateX="300.0" translateY="-125.0" />
+   <Label fx:id="greaterThanLabel" translateX="300.0" translateY="-120.0" />
+</VBox>
